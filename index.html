@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<title>Security Feed</title>
+
+<style>
+    body{font-size: 20px;line-height: 22px !important;}
+    .rssDiv{float:left; padding-right: 10px;}
+    ul{width: 700px ; line-height: 24px !important;}
+    p { margin-top: 10px ; margin-bottom: 10px ; }
+</style>
+
+</head>
+
+<body>
+<div class="rssDiv" id="divRss"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/FeedEk.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+      $('#divRss').FeedEk({
+      FeedUrl : 'https://krebsonsecurity.com/feed',
+      MaxCount : 3,
+      ShowDesc : true,
+      ShowPubDate:true,
+      DescCharacterLimit:5000,
+      TitleLinkTarget:true
+    });
+ });
+ </script>
+
+</body>
+</html>
