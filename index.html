@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<div class="rssDiv" id="divRss2"></div>
 <div class="rssDiv" id="divRss"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -24,6 +25,15 @@
     $(document).ready(function () {
       $('#divRss').FeedEk({
       FeedUrl : 'https://krebsonsecurity.com/feed',
+      MaxCount : 3,
+      ShowDesc : true,
+      ShowPubDate:true,
+      DescCharacterLimit:5000,
+      TitleLinkTarget:true
+    });
+    $(document).ready(function () {
+      $('#divRss2').FeedEk({
+      FeedUrl : 'https://threatpost.com/feed',
       MaxCount : 3,
       ShowDesc : true,
       ShowPubDate:true,
